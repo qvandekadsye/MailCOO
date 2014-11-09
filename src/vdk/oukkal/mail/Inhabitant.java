@@ -22,7 +22,7 @@ public class Inhabitant {
 	 */
 	public void receiveLetter(Letter theLetter)
 	{
-		theLetter.action;
+		theLetter.action();
 	}
 	
 	/**

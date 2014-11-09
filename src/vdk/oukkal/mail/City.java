@@ -73,7 +73,7 @@ public class City {
 	 * Add one letter in the mail box of city
 	 * @param letter 
 	 */
-	public void sendLetters(Letter letter){
+	public void sendLetter(Letter letter){
 		this.mailBox.add(letter);
 	}
 

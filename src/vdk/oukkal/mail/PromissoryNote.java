@@ -6,7 +6,7 @@ package vdk.oukkal.mail;
 public class PromissoryNote extends Letter<Money> {
 
 	
-	/** Cost of basique promissory note */
+	/** Cost of basic promissory note */
 	public final static float BASE = 1 ;
 	
 	//Constructor
@@ -33,8 +33,8 @@ public class PromissoryNote extends Letter<Money> {
 	 */
 	public void action(){
 		System.out.println(this.receiver+" has received "+this.content.getMoney());
-		this.receiver.getCity().sendLetter(new SimpleLetter(this.receiver,this.sender,new Text("Think for "+this.content.getMoney()."$")));
-		System.out.println("And sending a simple letter to "+this.sender+" to think him ");
+		this.receiver.getCity().sendLetter(new SimpleLetter(this.receiver,this.sender,new TextContent("Think for "+this.content.getMoney()+"$")));
+		System.out.println("And sending a simple letter to "+this.sender+" to thank him ");
 	}
 	
 	
