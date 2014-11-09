@@ -3,7 +3,7 @@ package vdk.oukkal.mail;
 /**
  * The Simple letter is a letter containing a text.
  */
-public class SimpleLetter extends Letter<Text> {
+public class SimpleLetter extends Letter<TextContent> {
 
 	
 	/** Cost of simple letter */
@@ -11,7 +11,7 @@ public class SimpleLetter extends Letter<Text> {
 		
 	//Constructor
 	
-	public SimpleLetter( Inhabitant sender, Inhabitant receiver, Text content){ 
+	public SimpleLetter( Inhabitant sender, Inhabitant receiver, TextContent content){ 
 		super(sender,receiver,content);
 	}
 	
