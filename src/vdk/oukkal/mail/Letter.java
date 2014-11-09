@@ -5,7 +5,7 @@ package vdk.oukkal.mail;
  * The letter class represents the letter that will be sent
  * @param <T> Type of the letter
  */
-public abstract class Letter<T extends Content> {
+public abstract class Letter<T extends Content> implements Content{
 
 	//Attribut
 	

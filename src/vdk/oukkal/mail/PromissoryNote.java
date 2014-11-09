@@ -36,6 +36,13 @@ public class PromissoryNote extends Letter<Money> {
 		this.receiver.getCity().sendLetter(new SimpleLetter(this.receiver,this.sender,new TextContent("Think for "+this.content.getMoney()+"$")));
 		System.out.println("And sending a simple letter to "+this.sender+" to thank him ");
 	}
+
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return "this is a promissory letter" ;
+	}
 	
 	
 }

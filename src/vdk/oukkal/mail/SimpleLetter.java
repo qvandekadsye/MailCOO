@@ -30,4 +30,10 @@ public class SimpleLetter extends Letter<TextContent> {
 	public void action(){
 		System.out.println(this.receiver.getName()+" read : \" "+this.content.getContent()+" \"");
 	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return "This is a letter";
+	}
 }
