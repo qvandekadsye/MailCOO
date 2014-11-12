@@ -1,11 +1,14 @@
 //To do for the project :
-Interface content (quentin)
-create Money (quentin)
-create TextContent(quentin)
-inhabitant(quentin)
-bankAccount(quentin)
 
-SimpleLetter (mohamed)
-PromissoryNote(mohamed)
-letter(mohamed)
-city(mohamed)
+TEST
+
+Interface content (M)
+create Money (M)
+create TextContent(M)
+inhabitant(M)
+bankAccount(M)
+
+SimpleLetter (Q)
+PromissoryNote(Q)
+letter(Q)
+city(Q)
