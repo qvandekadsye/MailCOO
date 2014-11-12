@@ -20,7 +20,7 @@ public class TextContent implements Content {
 	@Override
 	public String getDescription() {
 		// TODO Auto-generated method stub
-		return "this is a text";
+		return "a text content ("+this.content+")";
 	}
 
 }
