@@ -20,7 +20,7 @@ public class Inhabitant {
 	/**
 	 * @param theLetter The letter that the inhabitant will receive.
 	 */
-	public void receiveLetter(Letter theLetter)
+	public void receiveLetter(Letter<?> theLetter)
 	{
 		theLetter.action();
 	}
