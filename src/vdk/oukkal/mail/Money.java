@@ -18,7 +18,7 @@ public class Money implements Content {
 
 	@Override
 	public String getDescription() {
-		return "This is money";
+		return " a money centent ("+this.getMoney()+")";
 	}
 
 }

@@ -41,7 +41,7 @@ public class PromissoryNote extends Letter<Money> {
 	@Override
 	public String getDescription() {
 		// TODO Auto-generated method stub
-		return "this is a promissory letter" ;
+		return "a promissory note" ;
 	}
 	
 	
