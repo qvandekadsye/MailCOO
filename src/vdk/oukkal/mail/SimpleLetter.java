@@ -34,6 +34,6 @@ public class SimpleLetter extends Letter<TextContent> {
 	@Override
 	public String getDescription() {
 		// TODO Auto-generated method stub
-		return " a simple letter ";
+		return "a simple letter";
 	}
 }

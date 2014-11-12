@@ -10,7 +10,7 @@ public class RegisteredLetter extends Letter<Letter<?>> {
 
 	
 	public String getDescription() {
-		return "a registered letter whose content is "+this.content.getDescription() ;
+		return "a registered letter whose "+this.content.getDescription();
 	}
 
 	

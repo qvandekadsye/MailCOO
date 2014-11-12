@@ -75,7 +75,9 @@ public class City {
 	 */
 	public void sendLetter(Letter<?> letter){
 		this.mailBox.add(letter);
-		System.out.println(letter.getSender().getName()+"mails "+letter.getDescription()+" whose content is "+letter.content.getDescription()+" to "+ letter.getReceiver().getName()+" for a cost of "+letter.getCost()+" euro(s).");
+		System.out.println("-> "+letter.getSender().getName()+" mails "+letter.getDescription()+" whose content is "+letter.content.getDescription()+" to "+ letter.getReceiver().getName()+" for a cost of "+letter.getCost()+" euro(s).");
+		letter.getSender().getBankAccount().debit(letter.getCost());
+		System.out.println(letter.getSender().getName()+" account whose balance is now "+letter.getSender().getBankAccount().getAmount());
 	}
 
 

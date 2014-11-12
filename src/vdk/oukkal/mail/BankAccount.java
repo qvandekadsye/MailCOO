@@ -57,7 +57,7 @@ public class BankAccount {
 	public void debit(float moneyToDebit)
 	{
 		this.amount-=moneyToDebit;
-		System.out.print(moneyToDebit+" euro are debited from ");
+		System.out.print("   - "+moneyToDebit+" euro are debited from ");
 	}
 	
 	

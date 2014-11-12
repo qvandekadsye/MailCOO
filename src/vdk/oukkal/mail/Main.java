@@ -15,7 +15,7 @@ public class Main {
 			int j = (int)(Math.random() * ((4 - 1) + 1));
 			return new RegisteredLetter(sender, receiver, createLetter(sender, receiver,j));
 		}
-		
+
 		int j = (int)(Math.random() * ((4 - 1) + 1));
 		return new UrgentLetter(sender, receiver, createLetter(sender, receiver,j));
 
@@ -46,13 +46,20 @@ public class Main {
 		System.out.println("Mailing letters for "+k+" days");
 
 		for(int j = 0 ; j < k; j++){
+			
 			System.out.println("************************************************************");
 			System.out.println("Day "+j);
-			int aleaSender = (int)(Math.random() * ((99 - 1) + 1));
-			int aleaReceiver = (int)(Math.random() * ((99 - 1) + 1));
-			int typeLetter = (int)(Math.random() * ((4 - 1) + 1));
-			Letter<?> l = main.createLetter(city.getInhabitants().get(aleaSender), city.getInhabitants().get(aleaReceiver), typeLetter);
-			city.sendLetter(l);
+			if(j!=0)
+				city.distributeLetters();
+			for(int n = 0 ; n < 2 ;n++){
+				int aleaSender = (int)(Math.random() * ((99 - 1) + 1));
+				int aleaReceiver = (int)(Math.random() * ((99 - 1) + 1));
+				int typeLetter = (int)(Math.random() * ((4 - 1) + 1));
+				Letter<?> l = main.createLetter(city.getInhabitants().get(aleaSender), city.getInhabitants().get(aleaReceiver), 1);
+				city.sendLetter(l);
+			}
+
+
 		}
 
 
