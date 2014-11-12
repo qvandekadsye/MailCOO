@@ -1,9 +1,10 @@
 package vdk.oukkal.mail;
 
-public class RegisteredLetter extends Letter<Letter> {
+public class RegisteredLetter extends Letter<Letter<?>> {
+	public static final float REGISTEREDCOST=15;
 
 	public RegisteredLetter(Inhabitant sender, Inhabitant receiver,
-			Letter content) {
+			Letter<?> content) {
 		super(sender, receiver, content);
 		// TODO Auto-generated constructor stub
 	}
@@ -17,7 +18,7 @@ public class RegisteredLetter extends Letter<Letter> {
 	@Override
 	public float getCost() {
 		// TODO Auto-generated method stub
-		return 0;
+		return REGISTEREDCOST+content.getCost();
 	}
 
 	@Override
