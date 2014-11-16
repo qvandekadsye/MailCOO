@@ -9,6 +9,6 @@ inhabitant(M)
 
 
 SimpleLetter (Q)
-PromissoryNote(Q)
+
 letter(Q)
 
