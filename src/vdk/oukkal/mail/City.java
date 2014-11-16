@@ -19,7 +19,7 @@ public class City {
 	private List<Letter<?>> mailBox;
 
 	/** Lettre qui va etre distribuer par le facteur*/
-	private List<Letter<?>> sacocheFacteur;
+	private List<Letter<?>> mailmansBag;
 
 	
 
@@ -30,7 +30,7 @@ public class City {
 		this.name = name;
 		this.inhabitants = new ArrayList<Inhabitant>();
 		this.mailBox = new ArrayList<Letter<?>>();
-		this.sacocheFacteur = new ArrayList<Letter<?>>();
+		this.mailmansBag = new ArrayList<Letter<?>>();
 	}
 
 
@@ -52,6 +52,22 @@ public class City {
 	 */
 	public String getName(){
 		return this.name;
+	}
+	
+	/**
+	 * @return The city's MailBox.
+	 */
+	public List<Letter<?>> getMailBox()
+	{
+		return this.mailBox;
+	}
+	
+	/**
+	 * @return The Mailman's Bag.
+	 */
+	public List<Letter<?>>getMailMansBag()
+	{
+		return this.mailmansBag;
 	}
 
 
@@ -84,9 +100,9 @@ public class City {
 	/**
 	 * Simule le fait que le facteur recupere les lettres de la boite au lettre
 	 */
-	private void viderLaBoiteAuLetterDansLaSacoche(){
+	private void cleanMailBox(){
 		for(Letter<?> l : this.mailBox)
-			this.sacocheFacteur.add(l);
+			this.mailmansBag.add(l);
 		this.mailBox.clear();
 	}
 
@@ -95,10 +111,10 @@ public class City {
 	 * Distribute letters from mail box to inhabitant of city
 	 */
 	public void distributeLetters(){
-		this.viderLaBoiteAuLetterDansLaSacoche();
-		for( Letter<?> l : this.sacocheFacteur)
+		this.cleanMailBox();
+		for( Letter<?> l : this.mailmansBag)
 			l.getReceiver().receiveLetter(l);
-		this.sacocheFacteur.clear();
+		this.mailmansBag.clear();
 	}
 
 }

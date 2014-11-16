@@ -6,9 +6,9 @@ Interface content (M)
 create Money (M)
 create TextContent(M)
 inhabitant(M)
-bankAccount(M)
+
 
 SimpleLetter (Q)
 PromissoryNote(Q)
 letter(Q)
-city(Q)
+

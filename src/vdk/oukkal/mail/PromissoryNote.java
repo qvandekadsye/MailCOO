@@ -18,7 +18,7 @@ public class PromissoryNote extends Letter<Money> {
 	//Getter
 
 	/**
-	 * Cost of promissory note, the cost is equal to 1% of the amount sent more the basique cost. 
+	 * Cost of promissory note, the cost is equal to 1% of the amount sent more the basic cost. 
 	 * @return cost of promissory
 	 */
 	public float getCost(){
