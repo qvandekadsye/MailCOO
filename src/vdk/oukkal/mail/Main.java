@@ -13,11 +13,11 @@ public class Main {
 		}
 		else if( i == 2){
 			int j = (int)(Math.random() * ((4 - 1) + 1));
-			return new RegisteredLetter(sender, receiver, createLetter(sender, receiver,j));
+			return new RegisteredLetter(sender, receiver, createLetter(sender, receiver,1));
 		}
 
 		int j = (int)(Math.random() * ((4 - 1) + 1));
-		return new UrgentLetter(sender, receiver, createLetter(sender, receiver,j));
+		return new UrgentLetter(sender, receiver, createLetter(sender, receiver,1));
 
 
 	}

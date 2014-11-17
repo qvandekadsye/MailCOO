@@ -25,15 +25,12 @@ public class SimpleLetter extends Letter<TextContent> {
 	
 	/**
 	 * When the receiver open the letter, he read the text.
-	 * A message appears in the Standard output representing this action.	 
 	 */
 	public void action(){
-		System.out.println(this.receiver.getName()+" read : \" "+this.content.getContent()+" \"");
 	}
 
 	@Override
 	public String getDescription() {
-		// TODO Auto-generated method stub
-		return "a simple letter";
+		return "a simple letter whose content is a text content ("+this.content.getContent()+")";
 	}
 }

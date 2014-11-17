@@ -22,7 +22,7 @@ public class Inhabitant {
 	 */
 	public void receiveLetter(Letter<?> theLetter)
 	{
-		System.out.println("<-"+this.getName()+" receives "+theLetter.getDescription()+ " whose content is "+theLetter.getDescription()+" from "+theLetter.sender.getName());
+		System.out.println("<-"+this.getName()+" receives "+theLetter.getDescription()+" from "+theLetter.getSender().getName());
 		theLetter.action();
 	}
 	

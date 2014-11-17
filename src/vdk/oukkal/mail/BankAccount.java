@@ -47,8 +47,6 @@ public class BankAccount {
 	public void credit(float moneyToCredit)
 	{
 		this.amount+=moneyToCredit;
-		System.out.print(moneyToCredit+" euro are credited from ");
-
 	}
 	
 	/**

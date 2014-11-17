@@ -32,17 +32,18 @@ public class PromissoryNote extends Letter<Money> {
 	 * A message appears in the Standard output representing this action.	 
 	 */
 	public void action(){
+		this.receiver.getBankAccount().debit(this.getContent().getMoney());
 		this.receiver.getBankAccount().credit(this.getContent().getMoney());
-		System.out.println(this.receiver.getName()+" has received "+this.content.getMoney()+" his balance is now "+this.receiver.getBankAccount().getAmount());
+		System.out.println(this.getSender().getName());
+		System.out.println("   + "+this.getReceiver().getName()+" account is credited with "+this.content.getMoney()+"; its balance is now "+this.getReceiver().getBankAccount().getAmount());
 		this.receiver.getCity().sendLetter(new SimpleLetter(this.receiver,this.sender,new TextContent("Think for "+this.content.getMoney()+"$")));
-		System.out.println("And sending a simple letter to "+this.sender.getName()+" to thank him ");
 	}
 
 
 	@Override
 	public String getDescription() {
 		// TODO Auto-generated method stub
-		return "a promissory note" ;
+		return "a promissory note letter whose content is a money content ("+this.content.getMoney()+")" ;
 	}
 	
 	
