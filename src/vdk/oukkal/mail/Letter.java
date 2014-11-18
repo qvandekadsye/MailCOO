@@ -23,6 +23,11 @@ public abstract class Letter<T extends Content> implements Content{
 	
 	//Constructeur
 	
+	/**
+	 * @param sender The <code>Inhabitant</code> who has sent the letter.
+	 * @param receiver The <code>Inhabitant</code> who will receive the letter.
+	 * @param content The letter's content.
+	 */
 	public Letter( Inhabitant sender, Inhabitant receiver, T content){
 		this.sender = sender;
 		this.receiver = receiver;
@@ -35,7 +40,7 @@ public abstract class Letter<T extends Content> implements Content{
 	//Getter
 	
 	/**
-	 * Sender of letter
+	 * 
 	 * @return Sender of letter
 	 */
 	public Inhabitant getSender(){
@@ -43,7 +48,7 @@ public abstract class Letter<T extends Content> implements Content{
 	}
 	
 	/**
-	 * Receiver of letter
+	 * 
 	 * @return receiver of letter
 	 */
 	public Inhabitant getReceiver(){
@@ -51,16 +56,16 @@ public abstract class Letter<T extends Content> implements Content{
 	}
 	
 	/**
-	 * Content of letter
+	 * 
 	 * @return content of letter
 	 */
 	public T getContent(){
 		return this.content;
 	}
 	
-	/*
-	 * Cost of letter
-	 * @return cost of letter
+	/**
+	 * 
+	 * @return The letter's cost.
 	 */
 	public abstract float getCost();
 	
@@ -69,8 +74,8 @@ public abstract class Letter<T extends Content> implements Content{
 	
 	//Methode
 	
-	/*
-	 * DO one or more actions according to the type of letter
+	/**
+	 * Do one action or more according to the letter's type.
 	 */
 	public abstract void action();
 	

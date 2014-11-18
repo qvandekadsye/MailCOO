@@ -1,5 +1,9 @@
 package vdk.oukkal.mail;
 
+/**
+ * An Inhabitant in the city.
+ *
+ */
 public class Inhabitant {
 	private City theCity;
 	private String name;
@@ -42,6 +46,9 @@ public class Inhabitant {
 		return this.name;
 	}
 	
+	/**
+	 * @return The Inhabitant's bank account.
+	 */
 	public BankAccount getBankAccount()
 	{
 		return this.theBankAccount;

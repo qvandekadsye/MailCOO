@@ -1,5 +1,9 @@
 package vdk.oukkal.mail;
 
+/**
+ * Simulating a registered letter.
+ *
+ */
 public class RegisteredLetter extends Letter<Letter<?>> {
 	public static final float REGISTEREDCOST=15;
 

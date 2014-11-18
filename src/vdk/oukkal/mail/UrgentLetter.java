@@ -1,5 +1,9 @@
 package vdk.oukkal.mail;
 
+/**
+ * A letter type Urgent
+ *
+ */
 public class UrgentLetter extends Letter<Letter<?>> {
 
 	public UrgentLetter(Inhabitant sender, Inhabitant receiver,
