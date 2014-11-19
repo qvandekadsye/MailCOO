@@ -1,0 +1,14 @@
+//To do for the project :
+
+TEST
+
+Interface content (M)
+create Money (M)
+create TextContent(M)
+inhabitant(M)
+
+
+SimpleLetter (Q)
+
+letter(Q)
+

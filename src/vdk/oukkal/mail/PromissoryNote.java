@@ -32,11 +32,11 @@ public class PromissoryNote extends Letter<Money> {
 	 * A message appears in the Standard output representing this action.	 
 	 */
 	public void action(){
-		this.receiver.getBankAccount().debit(this.getContent().getMoney());
+		this.sender.getBankAccount().debit(this.getContent().getMoney());
 		this.receiver.getBankAccount().credit(this.getContent().getMoney());
 		System.out.println(this.getSender().getName());
 		System.out.println("   + "+this.getReceiver().getName()+" account is credited with "+this.content.getMoney()+"; its balance is now "+this.getReceiver().getBankAccount().getAmount());
-		this.receiver.getCity().sendLetter(new SimpleLetter(this.receiver,this.sender,new TextContent("Think for "+this.content.getMoney()+"$")));
+		this.receiver.getCity().sendLetter(new SimpleLetter(this.receiver,this.sender,new TextContent("Think for "+this.content.getMoney()+" euros")));
 	}
 
 
