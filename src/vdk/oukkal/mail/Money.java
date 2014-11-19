@@ -1,5 +1,9 @@
 package vdk.oukkal.mail;
 
+/**
+ * Money to put in the <code>letter</code>.
+ *
+ */
 public class Money implements Content {
 	private float sum;
 	
@@ -11,6 +15,9 @@ public class Money implements Content {
 		this.sum=quantity;
 	}
 	
+	/**
+	 * @return The amount of money in <Code>sum</code>
+	 */
 	public float getMoney()
 	{
 		return sum;

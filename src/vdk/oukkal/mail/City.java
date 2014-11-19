@@ -24,8 +24,11 @@ public class City {
 	
 
 
-	//Constructor
+	
 
+	/**
+	 * @param name The city's name.
+	 */
 	public City(String name){
 		this.name = name;
 		this.inhabitants = new ArrayList<Inhabitant>();
@@ -76,7 +79,7 @@ public class City {
 
 	/**
 	 * Add one inhabitant in the city
-	 * @param inhabitant for add in the city
+	 * @param inhabitant for add in the city.
 	 */
 	public void addInhabitant(Inhabitant inhabitant){
 		this.inhabitants.add(inhabitant);
@@ -87,7 +90,7 @@ public class City {
 	//Methode
 	/**
 	 * Add one letter in the mail box of city
-	 * @param letter 
+	 * @param letter The letter whose will go in the mailbox.
 	 */
 	public void sendLetter(Letter<?> letter){
 		this.mailBox.add(letter);
@@ -101,8 +104,9 @@ public class City {
 	}
 
 
+	
 	/**
-	 * Simule le fait que le facteur recupere les lettres de la boite au lettre
+	 * All the letters in the mailbox will go in the mailman's bag.
 	 */
 	private void cleanMailBox(){
 		for(Letter<?> l : this.mailBox)
@@ -112,7 +116,7 @@ public class City {
 
 
 	/**
-	 * Distribute letters from mail box to inhabitant of city
+	 * Distribute letters from mail box to inhabitant of city.
 	 */
 	public void distributeLetters(){
 		this.cleanMailBox();

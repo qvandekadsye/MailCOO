@@ -1,5 +1,9 @@
 package vdk.oukkal.mail;
 
+/**
+ * The class who will run the program.
+ *
+ */
 public class Main {
 
 

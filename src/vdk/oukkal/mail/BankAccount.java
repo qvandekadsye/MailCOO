@@ -1,5 +1,9 @@
 package vdk.oukkal.mail;
 
+/**
+ * A bank account for an <code>Inhabitant</code>.
+ *
+ */
 public class BankAccount {
 	private String code;
 	private float amount;

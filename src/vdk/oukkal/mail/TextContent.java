@@ -1,5 +1,9 @@
 package vdk.oukkal.mail;
 
+/**
+ * Simulation of a Text writing in a letter.
+ *
+ */
 public class TextContent implements Content {
 	private String content;
 	
