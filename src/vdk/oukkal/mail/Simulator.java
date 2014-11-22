@@ -1,10 +1,15 @@
 package vdk.oukkal.mail;
 
+/**
+ * Simulate a context for this project.
+ *
+ */
 public class Simulator {
 	private int numberOfDays;
 	private int numberOfInhabitant;
 	private float defaultSum;
 
+	
 	public Simulator()
 	{
 		this.numberOfDays=6;
@@ -13,9 +18,10 @@ public class Simulator {
 	}
 
 	/**
-	 * @param numberDays
-	 * @param numberInhabitant
-	 * @param defsum
+	 * Constructor
+	 * @param numberDays Number of day for the simulation.
+	 * @param numberInhabitant Number of inhabitant in the city.
+	 * @param defsum Default sum for each Inhabitant's bank account.
 	 */
 	public Simulator(String numberDays,String numberInhabitant, String defsum)
 	{
@@ -24,6 +30,13 @@ public class Simulator {
 		this.defaultSum=Float.parseFloat(defsum);
 	}
 
+	/**
+	 * Generate letter for the simulation.
+	 * @param sender The sender of the letter.
+	 * @param receiver The receiver.
+	 * @param i Type of letter : 0=simple, 1=promissory, 2=regesitred, 3=Urgent
+	 * @return
+	 */
 	public Letter<?> createLetter(Inhabitant sender, Inhabitant receiver, int i){
 		if(i == 0){
 			return new SimpleLetter(sender, receiver, new TextContent("bla bla"));
@@ -44,6 +57,9 @@ public class Simulator {
 
 	}
 
+	/**
+	 * Launch the simulator.
+	 */
 	public void launchSimulator()
 	{
 		City city = new City("Lille");
