@@ -36,7 +36,7 @@ public class PromissoryNote extends Letter<Money> {
 		this.receiver.getBankAccount().credit(this.getContent().getMoney());
 		System.out.println(this.getSender().getName());
 		System.out.println("   + "+this.getReceiver().getName()+" account is credited with "+this.content.getMoney()+"; its balance is now "+this.getReceiver().getBankAccount().getAmount());
-		this.receiver.getCity().sendLetter(new SimpleLetter(this.receiver,this.sender,new TextContent("Think for "+this.content.getMoney()+" euros")));
+		this.receiver.getCity().sendLetter(new SimpleLetter(this.receiver,this.sender,new TextContent("Thank for "+this.content.getMoney()+" euros")));
 	}
 
 
