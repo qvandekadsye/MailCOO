@@ -1,0 +1,116 @@
+Simulation de distribution de courrier.
+Oukkal Mohamed-Amin et Van de Kadsye Quentin
+2014
+
+
+**** 1/ Introduction
+
+	Ce projet simule la distribution de courrier pendant une durée et un nombre d'habitants précisé à l'exécution.
+
+
+
+
+
+
+
+**** 2/ Architecture
+
+	Polymorphisme :
+		Classe Letter (Classe abstraite représentant une lettre)
+	Grâce à cette classe Letter, la création des différent types de letter a été simple car chaque lettre extends Letter. Les lettres implémentées ici sont
+		- SimpleLetter (représentant une simple lettre)
+		- PromissoryNote (représentant une lettre contenant de l'argent)
+		- UrgentLetter (représentant une lettre urgente)
+		- RegisteredLetter (représentant une lettre recommandée)
+
+	Interface :
+		Interface Content (Interface représentant le contenu d'une lettre)
+	L'interface a permis d'implémentée des contenus de type :
+		- Text (TextContent : Contenu d'une SimpleLetter)
+		- Argent (Money : Contenu pour une PromissoryNote)
+		- Letter (Letter<?> : Contenu pour d'une UrgentLetter et d'une RefisteredLetter)
+
+
+
+
+
+
+
+
+**** 3/ Parcours du code
+
+	La simulation se fait en lançant la classe Main.
+ 	Elle vérifie en premiers lieux les arguments donnés en paramètre.
+ S'il n'y a pas de paramètre alors une version par défaut est lancer avec 100 habitants ayant chacun 5000 euros dans leurs comptes, la simulation dure 6 jours.
+	Si l'utilisateur met des parametre representant dans l'ordre
+		- Le nombre de jours que la simulation doit durée.
+		- Le nombre d'habitant 
+		- La somme que possedent chaque habitant
+	alors une simulation representant ces données est lancée.
+	Une fois que la classe main a vérifié les paramètres la classe Simulator est lancé.
+
+
+
+
+
+	La distribution des letters se fait à partir du 2e jour. La méthode distributeletters() simule d'abord le fait que la boîte aux lettres est vidée dans la "sacoche du facteur". Ensuite les lettres sont reçues par leurs destinataires. 
+
+	public void distributeLetters(){
+		this.cleanMailBox();
+		for( Letter<?> l : this.mailmansBag)
+			l.getReceiver().receiveLetter(l);
+		this.mailmansBag.clear();
+	}
+
+	private void cleanMailBox(){
+		for(Letter<?> l : this.mailBox)
+			this.mailmansBag.add(l);
+		this.mailBox.clear();
+	}
+
+
+
+
+
+	L'implémentation des classes UrgentLetter et RegisteredLetter utilise le design pattern decorator. Cette implementation est possible grace à l'interface Content, car toute lettre implements Content. 
+	 UrgentLetter et RegisteredLetter possèdent comme attribut une lettre. 
+
+	
+	public RegisteredLetter(Inhabitant sender, Inhabitant receiver,
+			Letter<?> content) {
+		super(sender, receiver, content);
+	}
+
+
+	public UrgentLetter(Inhabitant sender, Inhabitant receiver,
+			Letter<?> content) {
+		super(sender, receiver, content);
+	}
+
+
+
+
+
+
+
+
+
+**** Exécution 
+
+	Pour exécuter l'application il faut lancer la ligne de commande
+		- java -jar mail.jar 
+		ou
+		- java -jar mail.jar nbjour nbhabitant soldeParHabitant
+
+	Nbjour représente le nombre de jours où la stimulation dure, 
+	Nbhabitant représente le nombre d'habitants présents dans la stimulation et 
+	soldeParHabitant représente le solde que chaque habitant possède dans son compte au début de la simulation.
+
+
+
+
+
+
+
+La simulation ce fini une fois aux bouts du nombre de jours donnée en paramètre.
+
